@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" th:src="@{js/customer.js}" src="js/customer.js"></script>
+
+</head>
+<body>
+
+<form action="/save" id="saveCustomers" method="post" class="container">
+    <fieldset>
+        <legend>Click start to save list of customers to database</legend>
+<!--        <input type="hidden" value="started">-->
+        <input type="button" value="START" class="btn btn-primary" onclick="saveCustomerData();">
+    </fieldset>
+
+</form>
+
+<!--    <h3 class="container">OR</h3>-->
+
+    <div class="container" id="success">
+
+    </div>
+
+<!--    <div>-->
+<!--        <form th:action="@{/logout}" method="POST" class="container">-->
+<!--            <input type="submit" value="Logout" class="btn-danger"/>-->
+<!--        </form>-->
+<!--    </div>-->
+
+</body>
+</html>

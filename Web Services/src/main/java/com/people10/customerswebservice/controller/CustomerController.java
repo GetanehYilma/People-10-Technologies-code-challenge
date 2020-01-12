@@ -24,9 +24,9 @@ public class CustomerController {
         return customerService.getAllCustomers();
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Customer updateCustomer(@RequestBody Customer customer){
-        return customerService.saveCustomer(customer);
+        return customerService.updateCustomer(customer);
     }
 
     @DeleteMapping("/delete/{id}")

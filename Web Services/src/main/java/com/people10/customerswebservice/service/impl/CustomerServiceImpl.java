@@ -25,8 +25,13 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer updateCustomer(Customer customer) {
+        //Access the customer object from the database
+        Customer customerInDb = getCustomerById(customer.getId());
 
-        return null;
+        //Here we do our business logic - define how to update the records
+        //Save the updated customer object to the DB
+
+        return saveCustomer(customerInDb);
     }
 
     @Override

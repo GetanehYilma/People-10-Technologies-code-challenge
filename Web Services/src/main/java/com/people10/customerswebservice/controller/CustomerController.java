@@ -14,27 +14,27 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @PostMapping("/create")
+    @PostMapping("/")
     public Customer saveCustomer(@RequestBody Customer customer){
 
         return customerService.saveCustomer(customer);
     }
-    @GetMapping("/all")
+    @GetMapping("/")
     public List<Customer> getCustomers(){
         return customerService.getAllCustomers();
     }
 
-    @PutMapping("/update")
+    @PutMapping("/")
     public Customer updateCustomer(@RequestBody Customer customer){
         return customerService.updateCustomer(customer);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public String deleteCustomer(@PathVariable long id){
         return customerService.deleteCustomer(id);
     }
 
-    @GetMapping("/search/{search}")
+    @GetMapping("/{search}")
     public List<Customer> searchCustomer(@PathVariable String search){
 
         return customerService.searchCustomer(search);
